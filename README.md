@@ -30,7 +30,7 @@ For more detailed explanation and pictures, check out [this article](https://www
 
 ### Our simplified case
 I felt like implementing matrix multiplication and a complete 3D transformation engine would be an overkill. Our camera has only two degrees of freedom (called yaw, pitch) instead of 6 and so I dealt with the rotations individually instead of creating the rotation matrix. At this point I would like to just point out that simple transformations like rotation along one axis are trivial to invert (its in fact rotating in the opposite direction).  
-What I do is I rotate the model and then I move away from the center along the z direction. The code responsible for this 3D -> 3D transformation is
+What I do is I rotate the model and then I move away from the center along the z direction. The code responsible for this 3D -> 2D transformation is
 ```
 function toScreen(point)
 	x = point[1];	y = point[2];	z = point[3]
